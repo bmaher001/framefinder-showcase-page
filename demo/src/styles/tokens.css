@@ -1,0 +1,105 @@
+:root {
+  /* Desktop OS window contract */
+  --ff-window-min-width: 900px;
+  --ff-window-min-height: 600px;
+
+  /* Primitive color ramps */
+  --ink-950: 10 11 12;
+  --ink-900: 17 19 21;
+  --ink-850: 22 25 28;
+  --ink-800: 29 33 37;
+  --ink-700: 42 47 52;
+  --ink-600: 59 66 72;
+  --ink-500: 86 94 102;
+  --ink-400: 124 133 141;
+  --ink-300: 166 174 181;
+  --ink-200: 205 211 216;
+  --ink-100: 230 234 236;
+  --card: 239 239 237;
+
+  --signal-100: 255 228 225;
+  --signal-300: 255 156 148;
+  --signal-400: 255 90 79;
+  --signal-450: 255 69 58;
+  --signal-500: 255 0 0;
+  --signal-600: 204 0 0;
+  --signal-700: 143 20 16;
+
+  --daylight-300: 167 196 230;
+  --daylight-400: 127 166 214;
+  --daylight-500: 93 135 188;
+  --daylight-600: 67 103 143;
+  --confirmed: 78 156 107;
+  --rejected: 184 92 79;
+
+  /* Semantic UI tokens, light mode */
+  --ff-bg: 238 239 240;
+  --ff-surface: 249 249 249;
+  --ff-surface-alt: 255 255 255;
+  --ff-surface-hover: 242 243 244;
+  --ff-border: 205 208 211;
+  --ff-border-strong: var(--ink-300);
+  --ff-text-primary: 20 22 24;
+  --ff-text-secondary: 75 80 85;
+  --ff-text-tertiary: 112 118 123;
+  --ff-accent: var(--signal-600);
+  --ff-accent-hover: var(--signal-700);
+  --ff-accent-press: var(--signal-500);
+  --ff-on-accent: var(--ink-100);
+  --ff-info: var(--daylight-600);
+  --ff-error: var(--signal-450);
+
+  /* Backwards-compatible aliases used by existing Tailwind classes */
+  --bg-window: var(--ff-bg);
+  --bg-surface: var(--ff-surface);
+  --bg-elevated: var(--ff-surface-alt);
+  --bg-panel: var(--ff-surface-hover);
+  --border-default: var(--ff-border);
+  --text-primary: var(--ff-text-primary);
+  --text-secondary: var(--ff-text-secondary);
+  --text-muted: var(--ff-text-tertiary);
+
+  --ff-space-2: 2px;
+  --ff-space-4: 4px;
+  --ff-space-8: 8px;
+  --ff-space-12: 12px;
+  --ff-space-16: 16px;
+  --ff-space-24: 24px;
+  --ff-space-32: 32px;
+  --ff-space-48: 48px;
+  --ff-space-64: 64px;
+
+  --ff-radius-sm: 8px;
+  --ff-radius: 12px;
+  --ff-radius-lg: 16px;
+  --ff-radius-full: 9999px;
+
+  --ff-shadow-card: 0 2px 10px rgb(10 11 12 / 0.08);
+  --ff-shadow-panel: 0 12px 36px rgb(10 11 12 / 0.18);
+  --ff-duration-fast: 150ms;
+  --ff-duration-normal: 200ms;
+  --ff-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  color-scheme: light;
+}
+
+.dark {
+  /* Semantic UI tokens, dark mode */
+  --ff-bg: var(--ink-800);
+  --ff-surface: var(--ink-700);
+  --ff-surface-alt: var(--ink-600);
+  --ff-surface-hover: var(--ink-700);
+  --ff-border: var(--ink-800);
+  --ff-border-strong: var(--ink-700);
+  --ff-text-primary: var(--ink-100);
+  --ff-text-secondary: var(--ink-300);
+  --ff-text-tertiary: var(--ink-400);
+  --ff-accent: var(--signal-400);
+  --ff-accent-hover: var(--signal-300);
+  --ff-accent-press: var(--signal-500);
+  --ff-on-accent: var(--ink-950);
+  --ff-info: var(--daylight-500);
+  --ff-error: var(--signal-450);
+  --ff-shadow-card: 0 2px 10px rgb(0 0 0 / 0.14);
+  --ff-shadow-panel: 0 12px 36px rgb(0 0 0 / 0.22);
+  color-scheme: dark;
+}
