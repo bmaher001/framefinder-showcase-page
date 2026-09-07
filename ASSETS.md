@@ -22,3 +22,5 @@ Representative imagery from images.unsplash.com, downloaded at implementation ti
 | camera.jpg | photo-1485846234645-a62644f84728 |
 
 The sample people names are fictional demonstration labels. Photographs do not identify customers, cast members or actual catalogue subjects.
+
+Pending Reviews frame/reference pairs: copied unchanged from the running frontend-preview public/images/reviews directory (the application served on port 5178). Each of the four review identities uses its matching frame-v2 and portrait-v2 assets.

@@ -45,3 +45,7 @@ Fonts and representative Unsplash photographs are hosted locally. Image source I
 ## Verification
 
 `npm run build` builds both entries. Browser checks cover desktop and mobile layouts, missing assets and script errors, sample searches, drive reconnection, the guided app, dialog keyboard behavior and application success/error paths. Test submissions must use a separate `APPLICATIONS_FILE` when testing a live production instance.
+
+## Full app UI integration
+
+The embedded app now boots the full `App.tsx` entry from the frontend-preview app served on port 5178, including Dashboard, drive details, Smart Search, Scenes, People, Pending Reviews, Settings, Help, language/theme settings and login/logout. The limited ShowcaseDemo wrapper is no longer mounted. A same-origin message bridge supports guided screen navigation; manual app navigation pauses scroll-driven screen changes. As in the original frontend, data and backend-only operations remain prototypes.

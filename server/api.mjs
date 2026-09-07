@@ -13,8 +13,10 @@ export async function api(req,res){
  let input;try{input=JSON.parse(body)}catch{reply(res,400,{error:'Please submit a valid application.'});return true;}
  if(!input||typeof input!=='object'||Array.isArray(input)){reply(res,400,{error:'Please complete the application.'});return true;}
  if(input.website){reply(res,400,{error:'Unable to accept this application.'});return true;}
- const fields={};for(const [key,max]of Object.entries({name:120,email:254,role:120,company:160})){if(input[key]!=null&&typeof input[key]!=='string'){reply(res,400,{error:'Please check your application details.'});return true;}fields[key]=(input[key]||'').trim();if(fields[key].length>max||/[\u0000-\u001f]/.test(fields[key])){reply(res,400,{error:'Please check your application details.'});return true;}}
+ const fields={};for(const [key,max]of Object.entries({name:120,email:254,role:120,otherRole:120,company:160})){if(input[key]!=null&&typeof input[key]!=='string'){reply(res,400,{error:'Please check your application details.'});return true;}fields[key]=(input[key]||'').trim();if(fields[key].length>max||/[\u0000-\u001f]/.test(fields[key])){reply(res,400,{error:'Please check your application details.'});return true;}}
  if(fields.name.length<2||!fields.role||!/^\S+@[^\s@]+\.[^\s@]+$/.test(fields.email)){reply(res,400,{error:'Please provide your name, a valid email address and profession.'});return true;}
+ if(fields.role==='Other'&&!fields.otherRole){reply(res,400,{error:'Please specify your role.'});return true;}
+ if(fields.role!=='Other')delete fields.otherRole;
  const ip=req.socket.remoteAddress||'unknown',now=Date.now();for(const [key,value]of rates)if(now-value.start>3600000)rates.delete(key);const record=rates.get(ip)||{start:now,count:0};if(record.count>=10){reply(res,429,{error:'Too many applications. Please try again later.'});return true;}
  const id=randomUUID();try{const file=resolve(process.env.APPLICATIONS_FILE||'.data/applications.jsonl');await mkdir(dirname(file),{recursive:true,mode:0o700});await appendFile(file,JSON.stringify({id,createdAt:new Date().toISOString(),...fields})+'\n',{mode:0o600});record.count++;rates.set(ip,record);reply(res,201,{ok:true,id});}catch{reply(res,503,{error:'We could not save your application. Please try again shortly.'});}
  return true;

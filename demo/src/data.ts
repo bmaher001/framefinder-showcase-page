@@ -19,8 +19,8 @@ export const results: MediaResult[] = [
 ]
 
 export const reviews: ReviewItem[] = [
-  { id: 'f1', name: 'Maya Hassan', image: photo('maya', 500), reference: photo('maya', 500), confidence: 86, source: 'INTERVIEW_A_042.mov', timestamp: '00:13:08:21' },
-  { id: 'f2', name: 'Omar Saleh', image: photo('omar', 500), reference: photo('omar', 500), confidence: 74, source: 'BTS_DAY_06.mxf', timestamp: '00:08:52:02' },
-  { id: 'f3', name: 'Leila Nassar', image: photo('leila', 500), reference: photo('leila', 500), confidence: 68, source: 'MARKET_WALK_014.braw', timestamp: '00:22:11:16' },
-  { id: 'f4', name: 'Unknown #48', image: photo('maya', 500), reference: photo('leila', 500), confidence: 61, source: 'EVENT_WIDE_008.mov', timestamp: '00:03:27:12' },
+  { id: 'f1', name: 'Maya Hassan', image: '/images/reviews/maya-frame-v2.jpg', reference: '/images/reviews/maya-portrait-v2.jpg', confidence: 86, source: 'INTERVIEW_A_042.mov', timestamp: '00:13:08:21' },
+  { id: 'f2', name: 'Omar Saleh', image: '/images/reviews/omar-frame-v2.jpg', reference: '/images/reviews/omar-portrait-v2.jpg', confidence: 74, source: 'BTS_DAY_06.mxf', timestamp: '00:08:52:02' },
+  { id: 'f3', name: 'Leila Nassar', image: '/images/reviews/leila-frame-v2.jpg', reference: '/images/reviews/leila-portrait-v2.jpg', confidence: 68, source: 'MARKET_WALK_014.braw', timestamp: '00:22:11:16' },
+  { id: 'f4', name: 'Unknown #48', image: '/images/reviews/unknown48-frame-v2.jpg', reference: '/images/reviews/unknown48-portrait-v2.jpg', confidence: 61, source: 'EVENT_WIDE_008.mov', timestamp: '00:03:27:12' },
 ]
